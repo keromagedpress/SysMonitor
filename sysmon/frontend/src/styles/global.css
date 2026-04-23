@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ── Design tokens ─────────────────────────────────────────────────────────── */
+:root {
+  --bg:            #0a0a0f;
+  --surface:       #111118;
+  --surface-raised:#16161f;
+  --border:        #1e1e2e;
+  --accent:        #00d4ff;
+  --accent-purple: #7c4dff;
+  --accent-green:  #00e676;
+  --accent-orange: #ff6d00;
+
+  --text-primary:  #e0e0ff;
+  --text-secondary:#888899;
+
+  --severity-critical: #ff2222;
+  --severity-high:     #ff6622;
+  --severity-medium:   #ffaa22;
+  --severity-low:      #22aaff;
+}
+
+/* ── Reset ─────────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2e2e44;
+}
+
+/* ── Chart label ───────────────────────────────────────────────────────────── */
+.chart-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  padding: 0 4px;
+}
+
+/* ── Alert card container ──────────────────────────────────────────────────── */
+.alert-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.alert-card:hover {
+  transform: translateX(2px);
+  box-shadow: -3px 0 12px rgba(0, 212, 255, 0.06);
+}
+
+/* ── Global button reset ───────────────────────────────────────────────────── */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ── Keyframe animations ───────────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(0.85);
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 6px var(--accent);
+  }
+  50% {
+    box-shadow: 0 0 18px var(--accent), 0 0 36px var(--accent);
+  }
+}
+
+/* ── Utility: visually hidden (a11y) ──────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
