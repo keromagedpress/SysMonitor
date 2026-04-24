@@ -1,0 +1,24 @@
+# --- IDE and System Junk ---
+.vs/
+.vscode/
+bin/
+obj/
+*.user
+*.suo
+*.db
+*.opendb
+
+# --- Python Junk ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+env/
+.pytest_cache/
+
+# --- OS Junk ---
+Thumbs.db
+desktop.ini
+.DS_Store
