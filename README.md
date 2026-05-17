@@ -5,8 +5,8 @@ project os +graphics
 
 * Kirollos Maged Abd El Malak
 * Ahmed Mohamed Ali
-Abdelrahman Hussien Fouad 
-Mohamed Hamdy Hamdy
-Ibrahim Atef Nazmy
-Malak Tarek Saad
+* Abdelrahman Hussien Fouad 
+* Mohamed Hamdy Hamdy
+* Ibrahim Atef Nazmy
+* Malak Tarek Saad
 
